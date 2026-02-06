@@ -31,29 +31,30 @@ int main() {
   double commissionAmount = totalSales*(commissionPercent/100.0);
   double payAmount = baseSalary + commissionAmount - employeeExpenses;
 
-  cout << setprecision(2);
+  cout << fixed << setprecision(2);
 
   cout << endl;
-  cout << "Payroll data for " << firstName << " " << lastName << endl;
+  cout << "Payroll data for " << firstName << " " << lastName << endl << endl;
 
-  cout  << "Base Salary: " << endl;
+  cout  << left << setw(15) << "Base Salary: " << right << setw(10) << baseSalary << endl;
+
+  cout << left << setw(15) << "Commission: "
+  << right << setw(10) << commissionAmount 
+  << " (" << setprecision(1) << commissionPercent << "% of "
+  << setprecision(2) << totalSales << ")" << endl;
+
+  cout << left << setw(15) << "Expenses: " << right << setw(10) << employeeExpenses << endl;
+
+  cout << left << setw(15) << "" << right << setw(10) << "--------" << endl;
+
+  cout << left << setw(15) << "Total: " << right << setw(10) << payAmount << endl;
 
 
-
-  cout << "Commission: " << endl;
-
-
-
-  cout << "Expenses: " << endl;
-
-  
-
-  cout << "Total: " << endl;
 
   return 0;
 
 
-
+}
   
 
 
@@ -68,4 +69,4 @@ int main() {
 
   
  
-}
+
