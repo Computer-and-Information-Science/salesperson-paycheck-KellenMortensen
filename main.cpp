@@ -29,7 +29,7 @@ int main() {
   inputFile.close();
 
   double commissionAmount = totalSales*(commissionPercent/100.0);
-  double payAmount = baseSalary + commissionAmount - employeeExpenses;
+  double payAmount = baseSalary + commissionAmount + employeeExpenses;
 
   cout << fixed << setprecision(2);
 
